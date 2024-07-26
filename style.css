@@ -15,15 +15,19 @@ body{
 }
 .container{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .clock{
-    width: 700px;
-    height: 700px;
+    position: absolute;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: rgba(255 255 255 0.1);
     border: 3px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 0px 50px;
+    box-shadow: 0px 0px 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,23 +41,18 @@ body{
 
 }
 .clock span b{
-    transform: rotate(calc(-90deg * var(--i)));
+    position: absolute;
+    transform: rotate(calc(-30deg * var(--i)));
     display: inline-block;
-    font-size: 70px;
-    shadow:20px;
-}
-.clock span b p{
-    transform: rotate(calc(-45deg * var(--i)));
-    display: inline-block;
-    font-size: 70px;
-    shadow:20px;
+    font-size: 16px;
+    /* shadow:20px; */
 }
   
 .clock::before{
     content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: white;
     z-index: 2;
@@ -69,6 +68,6 @@ body{
     background-color: var(--clr);
     width: var(--w);
     height: var(--h);
-    border-radius: 8px;
+    border-radius: 16px;
 
  }
